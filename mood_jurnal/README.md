@@ -48,3 +48,4 @@
 ## Uji Coba Login
 
 Aplikasi ini tidak menyediakan akun dummy secara default. Untuk melakukan uji coba, silakan **buat akun baru** melalui halaman "Sign Up". Anda dapat menggunakan email dan password apa pun selama memenuhi persyaratan validasi (email valid dan password minimal 6 karakter).
+(untuk yang sudah saya pakai ada@gmail.com pass 1234567)
