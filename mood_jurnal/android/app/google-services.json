@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "934150773887",
-    "project_id": "moodjurnalapp",
-    "storage_bucket": "moodjurnalapp.firebasestorage.app"
+    "project_number": "817463415848",
+    "project_id": "moodjurnal-bbf83",
+    "storage_bucket": "moodjurnal-bbf83.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:934150773887:android:9c647d0acc43a89271b34a",
+        "mobilesdk_app_id": "1:817463415848:android:43ca00b60ea5a69a8ed11d",
         "android_client_info": {
           "package_name": "com.company.mood"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCqG7kyarqTQJQGd34Pqo4t3n5jE2CsKnM"
+          "current_key": "AIzaSyDBaCCBRMi10nDOm4MiNeIuCBquiJKXVOQ"
         }
       ],
       "services": {
@@ -26,7 +26,7 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:934150773887:android:d7d14b14a70e847371b34a",
+        "mobilesdk_app_id": "1:817463415848:android:c389e9fbf4dcc3388ed11d",
         "android_client_info": {
           "package_name": "com.example.mood_jurnal"
         }
@@ -34,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCqG7kyarqTQJQGd34Pqo4t3n5jE2CsKnM"
+          "current_key": "AIzaSyDBaCCBRMi10nDOm4MiNeIuCBquiJKXVOQ"
         }
       ],
       "services": {

@@ -1,51 +1,40 @@
 # Mood Jurnal
 
-## Deskripsi
+Aplikasi jurnal suasana hati sederhana yang dibuat dengan Flutter.
 
-**Mood Jurnal** adalah aplikasi mobile yang dirancang untuk membantu pengguna melacak dan mencatat suasana hati mereka setiap hari. Aplikasi ini menyediakan cara mudah untuk merefleksikan keadaan emosional, dan memantau kesehatan mental dari waktu ke waktu.
+## Fitur
 
-## Fitur Utama
+* Buat dan simpan catatan jurnal suasana hati harian.
+* Lihat riwayat entri jurnal Anda.
+* Login dan logout pengguna yang aman.
 
-* **Pencatatan Mood:** Pengguna dapat dengan cepat memilih emoji yang mewakili suasana hati mereka hari ini.
-* **Catatan Harian:** Opsi untuk menambahkan catatan atau jurnal singkat untuk setiap entri mood.
-* **Riwayat Mood:** Menampilkan daftar semua entri mood yang telah dicatat, diurutkan berdasarkan tanggal dan waktu.
-* **Autentikasi Pengguna:** Sistem login dan registrasi yang aman menggunakan email dan password.
-* **Layar Sambutan:** Pengguna baru akan disambut dengan layar "Get Started" saat pertama kali membuka aplikasi.
+## Langkah Install dan Build
 
-## Teknologi yang Digunakan
-
-* **Framework:** Flutter
-* **Backend & Autentikasi:** Firebase (Authentication & Cloud Firestore)
-* **Penyimpanan Lokal:** SharedPreferences (untuk menandai pengguna yang baru pertama kali membuka aplikasi)
-* **Manajemen State:** Provider
-* **Lainnya:**
-    * `intl`: Untuk pemformatan tanggal dan waktu.
-
-## Langkah Instalasi dan Build
-
-1.  **Clone Repositori**
-
+1.  **Clone repositori:**
     ```bash
-    git clone https://github.com/uass-ambw/mood_jurnal.git
-    cd mood_jurnal
+    git clone [https://github.com/xxmrepicxx/uasambw.git](https://github.com/xxmrepicxx/uasambw.git)
     ```
-
-2.  **Install Dependencies**
-    Pastikan Anda memiliki Flutter SDK yang terpasang. Jalankan perintah berikut di terminal:
-
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd uasambw
+    ```
+3.  **Install dependencies:**
     ```bash
     flutter pub get
     ```
-
-3.  **Konfigurasi Firebase**
-    Proyek ini sudah dikonfigurasi dengan file `google-services.json` untuk Android dan `GoogleService-Info.plist` untuk iOS (via `firebase_options.dart`).
-
-4.  **Jalankan Aplikasi**
+4.  **Jalankan aplikasi:**
     ```bash
     flutter run
     ```
 
-## Uji Coba Login
+## Teknologi yang Digunakan
 
-Aplikasi ini tidak menyediakan akun dummy secara default. Untuk melakukan uji coba, silakan **buat akun baru** melalui halaman "Sign Up". Anda dapat menggunakan email dan password apa pun selama memenuhi persyaratan validasi (email valid dan password minimal 6 karakter).
-(untuk yang sudah saya pakai ada@gmail.com pass 1234567)
+* **Flutter**
+* **Firebase**
+    * Authentication
+    * Cloud Firestore
+* **Provider**
+* **SharedPreferences**
+
+AKUN ada@gmail.com
+pass 1234567

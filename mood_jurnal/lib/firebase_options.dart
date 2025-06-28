@@ -41,48 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBSs0Si85rFWrsY7zXMPHETxOq-xZ5XRRY',
-    appId: '1:934150773887:web:7c9f5829e9c9efc271b34a',
-    messagingSenderId: '934150773887',
-    projectId: 'moodjurnalapp',
-    authDomain: 'moodjurnalapp.firebaseapp.com',
-    storageBucket: 'moodjurnalapp.firebasestorage.app',
-    measurementId: 'G-T0ESVMGRLL',
+    apiKey: 'AIzaSyBVIxWlxJr7blq04co3FEvJbqJ1SAl0xdI',
+    appId: '1:817463415848:web:c3e5ff9bf418112d8ed11d',
+    messagingSenderId: '817463415848',
+    projectId: 'moodjurnal-bbf83',
+    authDomain: 'moodjurnal-bbf83.firebaseapp.com',
+    storageBucket: 'moodjurnal-bbf83.firebasestorage.app',
+    measurementId: 'G-RWJX2B80FZ',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCqG7kyarqTQJQGd34Pqo4t3n5jE2CsKnM',
-    appId: '1:934150773887:android:d7d14b14a70e847371b34a',
-    messagingSenderId: '934150773887',
-    projectId: 'moodjurnalapp',
-    storageBucket: 'moodjurnalapp.firebasestorage.app',
+    apiKey: 'AIzaSyDBaCCBRMi10nDOm4MiNeIuCBquiJKXVOQ',
+    appId: '1:817463415848:android:c389e9fbf4dcc3388ed11d',
+    messagingSenderId: '817463415848',
+    projectId: 'moodjurnal-bbf83',
+    storageBucket: 'moodjurnal-bbf83.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDP0sWCEj3rtwMdOP1aiOMVnv-BMcHTuxI',
-    appId: '1:934150773887:ios:ba385cd41dc0823971b34a',
-    messagingSenderId: '934150773887',
-    projectId: 'moodjurnalapp',
-    storageBucket: 'moodjurnalapp.firebasestorage.app',
+    apiKey: 'AIzaSyA5x0IkHKxsqpDCF4IheeiZtamdya81s9U',
+    appId: '1:817463415848:ios:241c3297c9e069068ed11d',
+    messagingSenderId: '817463415848',
+    projectId: 'moodjurnal-bbf83',
+    storageBucket: 'moodjurnal-bbf83.firebasestorage.app',
     iosBundleId: 'com.example.moodJurnal',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDP0sWCEj3rtwMdOP1aiOMVnv-BMcHTuxI',
-    appId: '1:934150773887:ios:ba385cd41dc0823971b34a',
-    messagingSenderId: '934150773887',
-    projectId: 'moodjurnalapp',
-    storageBucket: 'moodjurnalapp.firebasestorage.app',
+    apiKey: 'AIzaSyA5x0IkHKxsqpDCF4IheeiZtamdya81s9U',
+    appId: '1:817463415848:ios:241c3297c9e069068ed11d',
+    messagingSenderId: '817463415848',
+    projectId: 'moodjurnal-bbf83',
+    storageBucket: 'moodjurnal-bbf83.firebasestorage.app',
     iosBundleId: 'com.example.moodJurnal',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBSs0Si85rFWrsY7zXMPHETxOq-xZ5XRRY',
-    appId: '1:934150773887:web:6a72aca0f20c591871b34a',
-    messagingSenderId: '934150773887',
-    projectId: 'moodjurnalapp',
-    authDomain: 'moodjurnalapp.firebaseapp.com',
-    storageBucket: 'moodjurnalapp.firebasestorage.app',
-    measurementId: 'G-8S38FQ6JM2',
+    apiKey: 'AIzaSyBVIxWlxJr7blq04co3FEvJbqJ1SAl0xdI',
+    appId: '1:817463415848:web:517e6bc523e0d5df8ed11d',
+    messagingSenderId: '817463415848',
+    projectId: 'moodjurnal-bbf83',
+    authDomain: 'moodjurnal-bbf83.firebaseapp.com',
+    storageBucket: 'moodjurnal-bbf83.firebasestorage.app',
+    measurementId: 'G-5JSCJJ3DEE',
   );
 }

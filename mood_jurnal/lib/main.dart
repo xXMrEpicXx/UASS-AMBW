@@ -1,28 +1,16 @@
-import 'package:flutter/material.dart';
+// (Bagian atas file Anda tidak perlu diubah, sudah benar)
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:mood_jurnal/screens/auth_gate.dart';
-import 'package:mood_jurnal/services/auth_service.dart';
-import 'package:mood_jurnal/screens/get_started_screen.dart';
-import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'firebase_options.dart';
-
-// Variabel global untuk menampung status first launch
-bool isFirstTime = true;
+import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'screens/home.dart';
+import 'package:mood_jurnal/screens/login.dart';
 
 void main() async {
-  // Pastikan semua binding Flutter sudah siap sebelum menjalankan kode lain
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Inisialisasi Firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-
-  // Cek Shared Preferences untuk Get Started Screen
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  isFirstTime = prefs.getBool('isFirstTime') ?? true;
-
+  await Firebase.initializeApp();
+  // Inisialisasi untuk format tanggal Indonesia
+  await initializeDateFormatting('id_ID', null);
   runApp(const MyApp());
 }
 
@@ -31,19 +19,56 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      // Sediakan AuthService ke seluruh widget tree
-      create: (context) => AuthService(),
-      child: MaterialApp(
-        title: 'Mood Journal',
-        theme: ThemeData(
-          primarySwatch: Colors.teal,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        debugShowCheckedModeBanner: false,
-        // Tentukan halaman awal berdasarkan status isFirstTime
-        home: isFirstTime ? const GetStartedScreen() : const AuthGate(),
+    return MaterialApp(
+      title: 'Mood Jurnal',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        // --- PERUBAHAN KECIL: Menggunakan warna tema yang konsisten ---
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        useMaterial3: true,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      home: const AuthWrapper(),
+    );
+  }
+}
+
+
+// --- PERUBAHAN UTAMA DI SINI ---
+class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        // 1. Saat menunggu koneksi ke Firebase
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+
+        // 2. (TAMBAHAN) Jika terjadi error saat koneksi
+        if (snapshot.hasError) {
+          return const Scaffold(
+            body: Center(
+              child: Text('Terjadi kesalahan. Periksa koneksi Anda.'),
+            ),
+          );
+        }
+
+        // 3. Jika pengguna berhasil login (data ada)
+        if (snapshot.hasData) {
+          return const HomeScreen();
+        }
+        
+        // 4. Jika tidak ada pengguna yang login
+        return LoginScreen();
+      },
     );
   }
 }
